@@ -1,29 +1,46 @@
-import React from 'react'
+import React from 'react';
+import { Form, Button, Container } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
-const Login = () => {
+
+function Login() {
+
     return (
-        <div>
-            <div class="div-usuario">
-                <div class="row usuario">
-                    <h1 class="Headline1">Login</h1>
-                </div>
-                <form id="formulario">
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="name" class="form-label body1Regular label-edit">Usario</label>
-                        <input id="name" name="name" class="ms-1 edit body1Regular form-control" type="text" placeholder="" />
-                    </div>
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="password" class="form-label body1Regular label-edit">Password</label>
-                        <input id="password" name="password" class="ms-1 edit body1Regular form-control" type="password" placeholder="" />
-                    </div>
-                    <div class="form-group mx-sm-3 mb-2">
-                    <button type="submit" class="btn btn-primary mb-2">Aceptar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    )
-}
+        <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Correo</Form.Label>
+                <Form.Control
+                    type="email"
+                    placeholder="Enter email"
+                    name="email" />
+            </Form.Group>
 
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Contraseña</Form.Label>
+                <Form.Control
+                    type="password"
+                    placeholder="Password"
+                    name="password" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+                Enviar
+            </Button>
+
+            <Container className="auth__social-networks">
+                <Container
+                    className="google-btn"
+
+                >
+                    <Container className="google-icon-wrapper">
+                        <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
+                    </Container>
+                </Container>
+            </Container>
+            <Link to="/registro">Registrarse</Link>
+
+        </Form>
+
+    );
+}
 
 export default Login;

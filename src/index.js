@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Login from './components/Login';
+import './styles/style.css';
+import {RegistroApp} from './RegistroApp';
 
 ReactDOM.render(
-    <Login />,
+    <RegistroApp />,
   document.getElementById('root')
 );
 
