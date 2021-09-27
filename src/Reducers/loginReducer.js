@@ -4,8 +4,21 @@ export const loginReducer = (state = {}, action) => {
   switch (action.type) {
     case types.login:
       return {
-        usuario: action.payload.id,
-        password: action.payload.displayName,
+        usuario: action.payload.name,
+        password: action.payload.password,
+      };
+
+    default:
+      return state;
+  }
+};
+
+export const loginFacebook = (state = {}, action) => {
+  switch (action.type) {
+    case types.login:
+      return {
+        usuario: action.payload.name,
+        password: action.payload.password,
       };
 
     default:

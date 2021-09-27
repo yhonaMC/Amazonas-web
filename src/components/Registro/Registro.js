@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 
 const Registro = () => {
   const classes = useStyles();
-
   return (
     <Box
       sx={{
@@ -52,7 +51,6 @@ const Registro = () => {
             margin="normal"
             required
             fullWidth
-            id="nombre"
             label="nombre"
             type="text"
             name="name"
@@ -70,7 +68,6 @@ const Registro = () => {
             required
             fullWidth
             type="text"
-            id="apellido"
             label="Apellido"
             name="apellido"
             autoComplete="Apellido"
@@ -89,7 +86,6 @@ const Registro = () => {
             name="email"
             label="email"
             type="email"
-            id="email"
             autoComplete="current-password"
             className={classes.textfield}
             sx={{
@@ -107,7 +103,6 @@ const Registro = () => {
             name="password"
             label="Password"
             type="password"
-            id="password"
             autoComplete="current-password"
             className={classes.textfield}
             sx={{

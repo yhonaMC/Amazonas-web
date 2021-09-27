@@ -9,7 +9,11 @@ import { Paper } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { useDispatch } from "react-redux";
-import { loginGoogle, loginSincrono } from "../../actions/actionLogin";
+import {
+  loginFacebook,
+  loginGoogle,
+  loginSincrono,
+} from "../../actions/actionLogin";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -30,6 +34,10 @@ const Login = () => {
 
   const handleGoogle = () => {
     dispatch(loginGoogle());
+  };
+
+  const handleFacebook = () => {
+    dispatch(loginFacebook());
   };
 
   return (
@@ -145,6 +153,7 @@ const Login = () => {
           <Button
             type="submit"
             fullWidth
+            onClick={handleFacebook}
             sx={{
               mb: 2,
               background: "#F0AD64",
