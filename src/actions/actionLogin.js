@@ -1,6 +1,46 @@
 import { types } from "../types/types";
-import { getAuth, signInWithPopup } from "firebase/auth";
+import Swal from "sweetalert2";
+
+import {
+  getAuth,
+  signInWithPopup,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { google, facebook } from "../Firebase/firebaseConfig";
+
+// Sweet Alert
+const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener("mouseenter", Swal.stopTimer);
+    toast.addEventListener("mouseleave", Swal.resumeTimer);
+  },
+});
+
+export const loginCorreo = (email, password) => {
+  return (dispatch) => {
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then(({ user }) => {
+        dispatch(loginSincrono(user.displayName, user.uid));
+        Toast.fire({
+          icon: "success",
+          title: `Bienvenido ${user.displayName}`,
+        });
+      })
+      .catch((e) => {
+        console.log(e);
+        Toast.fire({
+          icon: "error",
+          title: "Usuario no existe",
+        });
+      });
+  };
+};
 
 export const loginGoogle = () => {
   return (dispatch) => {

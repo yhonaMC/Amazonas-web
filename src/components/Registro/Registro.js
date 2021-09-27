@@ -7,9 +7,27 @@ import Typography from "@mui/material/Typography";
 import { useStyles } from "../Login/style";
 import { Paper } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useForm } from "../../hooks/useForm";
+import { useDispatch } from "react-redux";
+import { registerDatos } from "../../actions/actionRegister";
 
 const Registro = () => {
   const classes = useStyles();
+
+  const [formValues, handleInputChange] = useForm({
+    nombre: "",
+    apellido: "",
+    email: "",
+    password: "",
+  });
+
+  const { nombre, apellido, email, password } = formValues;
+  const dispatch = useDispatch();
+  const handleRegister = (e) => {
+    e.preventDefault();
+    dispatch(registerDatos(nombre, apellido, email, password));
+  };
+
   return (
     <Box
       sx={{
@@ -25,7 +43,7 @@ const Registro = () => {
         },
       }}
     >
-      <form>
+      <form onSubmit={handleRegister}>
         <Paper
           sx={{
             p: 2,
@@ -53,8 +71,10 @@ const Registro = () => {
             fullWidth
             label="nombre"
             type="text"
-            name="name"
+            name="nombre"
             autoComplete="nombre"
+            value={nombre}
+            onChange={handleInputChange}
             sx={{
               border: "1px solid white",
               color: "black",
@@ -71,6 +91,8 @@ const Registro = () => {
             label="Apellido"
             name="apellido"
             autoComplete="Apellido"
+            value={apellido}
+            onChange={handleInputChange}
             sx={{
               border: "1px solid white",
               color: "black",
@@ -87,6 +109,8 @@ const Registro = () => {
             label="email"
             type="email"
             autoComplete="current-password"
+            value={email}
+            onChange={handleInputChange}
             className={classes.textfield}
             sx={{
               color: "black",
@@ -104,6 +128,8 @@ const Registro = () => {
             label="Password"
             type="password"
             autoComplete="current-password"
+            value={password}
+            onChange={handleInputChange}
             className={classes.textfield}
             sx={{
               color: "black",

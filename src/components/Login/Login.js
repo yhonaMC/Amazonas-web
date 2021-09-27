@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import {
   loginFacebook,
   loginGoogle,
-  loginSincrono,
+  loginCorreo,
 } from "../../actions/actionLogin";
 
 const Login = () => {
@@ -29,7 +29,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(loginSincrono(email, password));
+    dispatch(loginCorreo(email, password));
   };
 
   const handleGoogle = () => {
