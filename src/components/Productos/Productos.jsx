@@ -31,7 +31,115 @@ const Productos = () => {
       <Box sx={{ flexGrow: 1, mt: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={3}>
-            <Item sx={{ display: "flex", mt: 2 }}>xs=4</Item>
+            <Item sx={{ mt: 2 }}>
+              <div>
+                <h2 className="titleinfo">Envios gratis por Amazonas</h2>
+                <label className="label">
+                  <input
+                    type="checkbox"
+                    id="cbox1"
+                    value="first_checkbox"
+                    className="input"
+                  />
+                  Elige para envios Gratis
+                </label>
+              </div>
+
+              <div>
+                <h2 className="titleinfo">Descuentos Amazonas</h2>
+                <div>
+                  <label className="label">
+                    <input
+                      type="checkbox"
+                      id="cbox1"
+                      value="first_checkbox"
+                      className="input"
+                    />
+                    Elige para Obtener grandes descuentos
+                  </label>
+                </div>
+              </div>
+
+              <div className="depart">
+                <h2 className="titleinfo">Departamentos</h2>
+                <p className="departament">Computador</p>
+                <p className="departament">Laptos</p>
+                <p className="departament">Monitor</p>
+                <p className="departament">Mouse</p>
+                <p className="departament">Teclado</p>
+              </div>
+              <h2 className="titleinfo">Valoracion de los clientes</h2>
+              <div className="starts">
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+              </div>
+              <div className="starts">
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+              </div>
+
+              <div className="starts">
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+              </div>
+
+              <div className="starts">
+                <i className="material-icons start " id="car">
+                  star
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+                <i className="material-icons" id="car">
+                  star_outline
+                </i>
+              </div>
+            </Item>
           </Grid>
           <Grid item xs={8}>
             {product.map((artefactos) => (

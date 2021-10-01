@@ -34,7 +34,7 @@ const Detalles = () => {
                   srcSet={imagen}
                   className="lefimg"
                   onClick={() => handleClickImage(imagen)}
-                  key={imagen}
+                  key={imagen.id}
                 />
               ))}
             </Item>

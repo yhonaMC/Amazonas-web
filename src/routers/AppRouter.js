@@ -15,6 +15,7 @@ import { useDispatch } from "react-redux";
 import { listarProductos } from "../actions/actionProductos";
 import Detalles from "../components/Detalle/Detalles";
 import Productos from "../components/Productos/Productos.jsx";
+import NewProduct from "../components/NewProduct/NewProduct";
 
 export default function AppRouter() {
   const dispatch = useDispatch();
@@ -61,6 +62,12 @@ export default function AppRouter() {
             exact
             path="/detalle"
             component={Detalles}
+            isAuthenticated={auth}
+          />
+          <PrivateRouter
+            exact
+            path="/agregar"
+            component={NewProduct}
             isAuthenticated={auth}
           />
         </>

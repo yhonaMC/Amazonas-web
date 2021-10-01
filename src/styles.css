@@ -1,13 +1,21 @@
 .nav {
   background: #131921 !important;
   display: flex;
-  justify-content: space-around;
 }
 
 .welcome {
-  margin-left: 4%;
+  padding-left: 1.2%;
 }
 
+.agrega {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.agrega:hover {
+  color: #f0ad64;
+}
 .welcome h2 {
   font-size: 1em;
 }
@@ -25,6 +33,19 @@
   font-size: 20px;
 }
 
+.buttonNew {
+  margin-left: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  background: #f0ad64 !important;
+  color: white !important;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 50px;
+}
 /* Navbar Bottom */
 
 .navbarBottom {
@@ -44,11 +65,6 @@
   margin-top: 5px;
   font-size: 1em;
   font-weight: 500;
-}
-
-.button {
-  background: #f0ad64 !important;
-  color: white !important;
 }
 
 /* Pagina principal */
@@ -161,4 +177,99 @@ span {
 
 .iconosbutton {
   margin-right: 10px;
+}
+
+/* Barra Lateral */
+
+.titleinfo {
+  color: #131921;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px !important;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  color: #131921;
+}
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 10px;
+  margin-left: 10px !important;
+}
+.depart {
+}
+
+.departament {
+  display: flex;
+  justify-content: flex-start;
+  color: #131921;
+  cursor: pointer;
+  margin-left: 10px !important;
+}
+
+.departament:hover {
+  color: #f0ad64;
+}
+
+.starts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 10px !important;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+#file {
+  display: none;
+}
+.divCentral {
+  margin-right: 30%;
+  margin-top: 2%;
+}
+
+.titlePimary {
+  text-align: center !important;
+}
+
+.buttonresgistrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3d184;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  margin-bottom: 1%;
+}
+
+.buttonimagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0ad64;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.inputForm {
+  border: none !important;
+  margin-bottom: 2% !important;
 }

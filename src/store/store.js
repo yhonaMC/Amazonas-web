@@ -4,6 +4,7 @@ import { loginReducer } from "../Reducers/loginReducer";
 import { registerReducer } from "../Reducers/registerReducer";
 import { ProductosReducer } from "../Reducers/productosReducer";
 import { ActiveReducer } from "../Reducers/ActiveReducer";
+import { AñadirProductoReducer } from "../Reducers/AñadirProductoReducer";
 const composeEnhancers =
   (typeof window !== "undefined" &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
@@ -14,6 +15,7 @@ const reducers = combineReducers({
   register: registerReducer,
   product: ProductosReducer,
   categorys: ActiveReducer,
+  añadir: AñadirProductoReducer,
 });
 
 export const store = createStore(

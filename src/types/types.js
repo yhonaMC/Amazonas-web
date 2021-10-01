@@ -5,3 +5,7 @@ export const types = {
   productActive: "[productos] Active productos",
   loadProduct: "[productos] Load productos",
 };
+
+export const typesProductos = {
+  register: "register",
+};

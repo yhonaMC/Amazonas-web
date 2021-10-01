@@ -13,6 +13,7 @@ import Productos from "../Productos/Productos";
 import { useDispatch } from "react-redux";
 import { startLogout } from "../../actions/actionLogin";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -118,14 +119,13 @@ const Navbar = () => {
           <div className="welcome">
             <h2>Hola,identificate</h2>
             <h3>Cuenta y lista</h3>
-            <Button className="button" onClick={() => dispatch(startLogout())}>
-              Cerrar Sesion
-            </Button>
           </div>
 
           <div className="welcome">
             <h2>Devoluciones</h2>
-            <h3>Y Pedidos</h3>
+            <Link to="/agregar" className="agrega">
+              Agregar
+            </Link>
           </div>
 
           <div className="welcome">
@@ -135,6 +135,11 @@ const Navbar = () => {
               </i>
               <h3>Pedidos</h3>
             </div>
+          </div>
+          <div className="buttonNew">
+            <Button className="button" onClick={() => dispatch(startLogout())}>
+              Cerrar Sesion
+            </Button>
           </div>
 
           <Box sx={{ flexGrow: 1 }} />
