@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 
 import {
   getAuth,
+  signOut,
   signInWithPopup,
   signInWithEmailAndPassword,
 } from "firebase/auth";
@@ -67,6 +68,17 @@ export const loginFacebook = () => {
       });
   };
 };
+
+export const startLogout = () => {
+  return async (dispatch) => {
+    const auth = getAuth();
+    await signOut(auth);
+  };
+};
+
+export const logout = () => ({
+  type: types.logout,
+});
 
 export const loginSincrono = (name, password) => {
   return {

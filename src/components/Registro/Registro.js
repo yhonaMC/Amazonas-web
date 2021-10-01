@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { useDispatch } from "react-redux";
 import { registerDatos } from "../../actions/actionRegister";
+import { Formik } from "formik";
 
 const Registro = () => {
   const classes = useStyles();
@@ -43,7 +44,7 @@ const Registro = () => {
         },
       }}
     >
-      <form onSubmit={handleRegister}>
+      <form>
         <Paper
           sx={{
             p: 2,

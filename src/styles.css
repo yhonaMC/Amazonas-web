@@ -1,0 +1,164 @@
+.nav {
+  background: #131921 !important;
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome {
+  margin-left: 4%;
+}
+
+.welcome h2 {
+  font-size: 1em;
+}
+
+.welcome h3 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.ubication {
+  display: flex;
+}
+
+.ubication i {
+  font-size: 20px;
+}
+
+/* Navbar Bottom */
+
+.navbarBottom {
+  background: #242f3e !important;
+}
+
+.typography {
+  margin-left: 50px;
+  font-size: 25px;
+}
+.todo {
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.bottomText {
+  margin-top: 5px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.button {
+  background: #f0ad64 !important;
+  color: white !important;
+}
+
+/* Pagina principal */
+
+.price {
+  font-size: 18px !important;
+  color: #131921 !important;
+}
+
+span {
+  color: #131921;
+  font-weight: bold;
+}
+
+.start {
+  color: #ffa41c;
+  margin-top: 5px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Detalle */
+
+.link {
+  color: #131921;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #ffa41c;
+}
+
+.lefimg {
+  width: 50px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.centerimg {
+  width: 80%;
+}
+
+.title {
+  display: flex;
+  text-align: justify;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.precio {
+  color: #af2913;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.textprecio {
+  font-size: 1em;
+}
+
+.description {
+  padding: 3px;
+}
+
+.precioR {
+  color: #af2913;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.llegada {
+  margin-top: 5px;
+  font-size: 1.2em;
+}
+
+.infolle {
+  color: #af2913;
+  font-size: 1.2em;
+}
+
+.buttoncarrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3d184;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  margin-bottom: 5%;
+}
+
+.buttonahora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0ad64;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.iconosbutton {
+  margin-right: 10px;
+}
