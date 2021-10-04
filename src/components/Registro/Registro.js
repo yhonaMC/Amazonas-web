@@ -154,7 +154,7 @@ const Registro = () => {
           >
             Registrate
           </Button>
-          <Link to="/" className={classes.Link}>
+          <Link to="/auth/inicio" className={classes.Link}>
             Iniciar Sesion
           </Link>
         </Paper>

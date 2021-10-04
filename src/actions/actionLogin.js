@@ -49,6 +49,10 @@ export const loginGoogle = () => {
     signInWithPopup(auth, google)
       .then(({ user }) => {
         dispatch(loginSincrono(user.displayName, user.uid));
+        Toast.fire({
+          icon: "success",
+          title: `Bienvenido ${user.displayName}`,
+        });
       })
       .catch((e) => {
         console.log(e);
@@ -62,6 +66,10 @@ export const loginFacebook = () => {
     signInWithPopup(auth, facebook)
       .then(({ user }) => {
         dispatch(loginSincrono(user.displayName, user.uid));
+        Toast.fire({
+          icon: "success",
+          title: `Bienvenido ${user.displayName}`,
+        });
       })
       .catch((e) => {
         console.log(e);
