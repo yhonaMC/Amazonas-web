@@ -6,7 +6,9 @@ import Grid from "@mui/material/Grid";
 import "../../styles/style.css";
 import { useSelector } from "react-redux";
 import ReactImageMagnify from "react-image-magnify";
-
+import { setDelete } from "../../actions/actionProductos";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
@@ -16,8 +18,16 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Detalles = () => {
   const producto = useSelector((state) => state.categorys.product);
-  const { nombre, Descripcion, imagenes, precio } = producto;
+  const { nombre, Descripcion, imagenes, precio, id } = producto;
   const [image, setImage] = useState(imagenes[0]);
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const handleEliminar = (id) => {
+    dispatch(setDelete(id));
+    history.push("/principal");
+  };
+
   const handleClickImage = (imagen) => {
     setImage(imagen);
   };
@@ -81,17 +91,13 @@ const Detalles = () => {
                 Llega:<span> Oct 15-22</span>{" "}
               </p>
               <p className="infolle">Puede que lo recibas despues de octubre</p>
-              <button className="buttoncarrito">
-                <i className="material-icons iconosbutton" id="car">
-                  shopping_cart
-                </i>
-                Agregar al carrito
-              </button>
-              <button className="buttonahora">
-                <i className="material-icons iconosbutton" id="car">
-                  play_circle_filled
-                </i>
-                Comprar ahora
+              <button className="buttoncarrito">Editar</button>
+
+              <button
+                className="buttonahora"
+                onClick={() => handleEliminar(id)}
+              >
+                Eliminar
               </button>
             </Item>
           </Grid>

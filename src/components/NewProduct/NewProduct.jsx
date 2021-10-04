@@ -18,6 +18,7 @@ const NewProduct = () => {
 
   const arregloimg = [];
   const dispatch = useDispatch();
+
   const [info, setInfo] = useState("");
   const [infoimage, setInfoimage] = useState("");
   let timeout = null;
